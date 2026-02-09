@@ -2,11 +2,12 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mongo-service
+  namespace: unir-containers
 spec:
   selector:
     app: mongodb
   ports:
     - protocol: TCP
-      port: 27017      # Puerto del servicio
-      targetPort: 27017 # Puerto del contenedor
+      port: 27017  
+      targetPort: 27017
   type: ClusterIP
